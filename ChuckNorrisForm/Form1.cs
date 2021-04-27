@@ -23,5 +23,18 @@ namespace ChuckNorrisForm
             Joke jokes = await ChuckNorrisClient.GetRandomJoke();
             MessageBox.Show(jokes.JokeText);
         }
+
+        private void categoriesCbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void Form1_Load(object sender, EventArgs e)
+        {
+            string[] choice = (string[])await ChuckNorrisClient.GetCategories();
+            categoriesCbox.Items.AddRange(choice);
+
+            categoriesCbox.SelectedIndex = 0;
+        }
     }
 }
