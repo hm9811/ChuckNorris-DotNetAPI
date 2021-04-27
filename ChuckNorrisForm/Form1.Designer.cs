@@ -30,6 +30,7 @@ namespace ChuckNorrisForm
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.categoriesCbox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -42,14 +43,25 @@ namespace ChuckNorrisForm
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // categoriesCbox
+            // 
+            this.categoriesCbox.FormattingEnabled = true;
+            this.categoriesCbox.Location = new System.Drawing.Point(117, 57);
+            this.categoriesCbox.Name = "categoriesCbox";
+            this.categoriesCbox.Size = new System.Drawing.Size(213, 20);
+            this.categoriesCbox.TabIndex = 1;
+            this.categoriesCbox.SelectedIndexChanged += new System.EventHandler(this.categoriesCbox_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 312);
+            this.Controls.Add(this.categoriesCbox);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -57,6 +69,7 @@ namespace ChuckNorrisForm
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox categoriesCbox;
     }
 }
 
